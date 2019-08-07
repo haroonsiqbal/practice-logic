@@ -54,3 +54,58 @@ const assort = (amount, bank) => {
 assort(newAmount, piggyBank2);
 console.log(piggyBank2);
 
+// student grades
+
+const scores = [82, 71, 62, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87, 60]
+const grades = {}
+const arrayA = []
+const arrayB = []
+const arrayC = []
+const arrayD = []
+const arrayF = []
+
+const groupGrades = () => {
+    for (score of scores) {
+    if (score >= 50 && score < 61) {
+        arrayF.push(score);
+    }
+    if (score > 60 && score < 71) {
+        arrayD.push(score);
+    }
+    if (score > 70 && score < 81) {
+        arrayC.push(score);
+    }
+    if (score > 80 && score < 91) {
+        arrayB.push(score);
+    }
+    if (score > 90 && score <= 100) {
+        arrayA.push(score);
+    }
+  }
+
+  grades.A = arrayA
+  grades.B = arrayB
+  grades.C = arrayC
+  grades.D = arrayD
+  grades.F = arrayF
+
+}
+
+groupGrades();
+console.log(arrayF);
+console.log(arrayD);
+console.log(arrayC);
+console.log(arrayB);
+console.log(arrayA);
+
+console.log(grades);
+
+
+//how many in each grade
+console.log(grades.A.length, grades.B.length, grades.C.length, grades.D.length, grades.F.length);
+
+//lowest score in array
+console.log(Math.min(...scores))
+
+//highest score in array
+console.log(Math.max(...scores))
